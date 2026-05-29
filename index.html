@@ -7,7 +7,7 @@
   <title>Hugo Tolomei, Economic Policy Adviser</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy:       #1C2A4A;
@@ -19,7 +19,7 @@
       --muted:      rgba(245,243,238,0.55);
       --border:     rgba(201,165,71,0.25);
       --serif:      'Cormorant Garamond', Georgia, serif;
-      --sans:       'Montserrat', system-ui, sans-serif;
+      --sans:       'Inter', system-ui, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,9 +28,10 @@
       background: var(--navy);
       color: var(--white);
       font-family: var(--sans);
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.7;
       overflow-x: hidden;
+      font-size: 15px;
     }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
@@ -162,8 +163,8 @@
       justify-content: center;
     }
     .profile-bio {
-      font-family: var(--serif);
-      font-size: 1.1rem;
+      font-family: var(--sans);
+      font-size: 1rem;
       font-weight: 400;
       line-height: 1.85;
       color: var(--white);
@@ -202,13 +203,13 @@
       margin-bottom: 0.4rem;
     }
     .exp-role {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
     }
     .exp-desc {
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       line-height: 1.75;
       color: var(--muted);
     }
@@ -231,12 +232,12 @@
     .area-item:hover { background: var(--gold-faint); }
     .area-icon { width: 28px; height: 28px; margin-bottom: 1rem; opacity: 0.8; }
     .area-title {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 500;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    .area-desc { font-size: 0.75rem; line-height: 1.7; color: var(--muted); }
+    .area-desc { font-size: 0.85rem; line-height: 1.7; color: var(--muted); }
 
     /* ── CREDENTIALS ── */
     #credentials { padding-top: 5rem; }
@@ -247,11 +248,11 @@
       padding: 1.75rem;
     }
     .cred-level {
-      font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;
     }
-    .cred-degree { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; margin-bottom: 0.35rem; }
-    .cred-inst { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
+    .cred-degree { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .cred-inst { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
     /* ── ORGANISATIONS ── */
     #organisations { padding-top: 3rem; padding-bottom: 3rem; }
@@ -278,8 +279,7 @@
       padding: 4rem 3rem; text-align: center;
     }
     .insights-coming p {
-      font-family: var(--serif); font-style: italic;
-      font-size: 1.15rem; color: var(--muted); margin-top: 1rem;
+      font-family: var(--sans); font-size: 1rem; color: var(--muted); margin-top: 1rem;
     }
     .tag {
       display: inline-block;
@@ -389,8 +389,8 @@
         <p class="exp-org">Brazilian Ministry of Foreign Affairs</p>
         <p class="exp-role">Adviser</p>
         <p class="exp-desc">
-          <strong>Adviser</strong> to the Brazilian Representation for International Organisations in London.
-          Primary point of contact for economic and financial analysis with the Brazilian Ministry of Foreign Affairs
+          Engaged with the Brazilian Representation for International Organisations in London,
+          providing economic and financial analysis in coordination with the Ministry of Foreign Affairs
           and the leading multilateral organisations headquartered in the British capital.
         </p>
       </div>
@@ -399,7 +399,7 @@
         <p class="exp-org">International Fintech</p>
         <p class="exp-role">Strategist</p>
         <p class="exp-desc">
-          <strong>Strategist</strong> for an international payments fintech covering
+          Pricing and monetisation strategy for an international payments fintech covering
           Latin America and Southern Europe, including Portugal, Italy, Spain and Greece.
           Multi-jurisdictional operations across currencies and financial markets.
         </p>
@@ -409,7 +409,7 @@
         <p class="exp-org">Investment Banking</p>
         <p class="exp-role">Banking Analyst</p>
         <p class="exp-desc">
-          Formative experience in <strong>trading and analysis</strong> across commodities and foreign exchange.
+          Formative experience in trading and analysis across commodities and foreign exchange.
           Deep understanding of global financial markets and soft commodity pricing mechanisms.
         </p>
       </div>
@@ -418,7 +418,7 @@
         <p class="exp-org">IBGE, Brazilian Statistics Institute</p>
         <p class="exp-role">Research Coordinator</p>
         <p class="exp-desc">
-          Public sector engagement and <strong>innovation research</strong> at Brazil's primary
+          Public sector engagement and innovation research at Brazil's primary
           statistical body, grounding in evidence-based quantitative analysis and public policy.
         </p>
       </div>

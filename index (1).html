@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hugo Tolomei, Senior Economic Policy Adviser. Economic Intelligence. Political Reach. Global Vision.">
+  <title>Hugo Tolomei, Economic Policy Adviser</title>
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hugotolomei.com/" />
+  <meta property="og:title" content="Hugo Tolomei, Economic Policy Adviser" />
+  <meta property="og:description" content="Senior Economic Policy Adviser. Economic Intelligence. Political Reach. Global Vision." />
+  <meta property="og:image" content="https://hugotolomei.com/photo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hugo Tolomei, Economic Policy Adviser" />
+  <meta name="twitter:description" content="Senior Economic Policy Adviser. Economic Intelligence. Political Reach. Global Vision." />
+  <meta name="twitter:image" content="https://hugotolomei.com/photo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1C2A4A;
+      --navy-mid:   #22325A;
+      --gold:       #C9A547;
+      --gold-light: #DDB96A;
+      --gold-faint: rgba(201,165,71,0.12);
+      --white:      #F5F3EE;
+      --muted:      rgba(245,243,238,0.55);
+      --border:     rgba(201,165,71,0.25);
+      --serif:      'Cormorant Garamond', Georgia, serif;
+      --sans:       'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 18px; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.75;
+      overflow-x: hidden;
+      font-size: 18px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 4rem;
+      transition: background 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(28,42,74,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-linkedin {
+      display: inline-flex; align-items: center;
+      padding: 0.45rem 1.2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+    }
+    .nav-linkedin:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      padding: 6.5rem 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeUp 0.9s ease both;
+    }
+    .masthead-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+    .masthead-title {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION BASE ── */
+    section {
+      padding: 5rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .gold-dash {
+      display: block;
+      width: 28px; height: 1px;
+      background: var(--gold);
+      margin: 0.6rem 0 1.75rem;
+    }
+
+    /* ── PROFILE ── */
+    #profile {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 3rem;
+      align-items: stretch;
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border: 1px solid var(--border);
+      background: var(--navy-mid);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .profile-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .profile-photo-placeholder {
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.25;
+    }
+    .profile-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .profile-bio {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.9;
+      color: var(--white);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem;
+    }
+
+    /* ── EXPERIENCE ── */
+    #experience { padding-top: 5rem; }
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .exp-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .exp-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .exp-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px; background: var(--gold);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .exp-card:hover::before { opacity: 1; }
+    .exp-org {
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .exp-role {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .exp-desc {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .exp-desc strong { color: var(--white); font-weight: 400; }
+
+    /* ── EXPERTISE ── */
+    #expertise { padding-top: 5rem; }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--border);
+    }
+    .area-item {
+      padding: 2rem 1.75rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .area-item:hover { background: var(--gold-faint); }
+    .area-icon { width: 28px; height: 28px; margin-bottom: 1rem; opacity: 0.8; }
+    .area-title {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .area-desc { font-size: 0.92rem; line-height: 1.75; color: var(--muted); }
+
+    /* ── CREDENTIALS ── */
+    #credentials { padding-top: 5rem; }
+    .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .cred-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+    }
+    .cred-level {
+      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;
+    }
+    .cred-degree { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .cred-inst { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── ORGANISATIONS ── */
+    #organisations { padding-top: 3rem; padding-bottom: 3rem; }
+    .org-bar {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+    }
+    .org-pill {
+      padding: 0.35rem 1rem;
+      border: 1px solid var(--border);
+      font-size: 0.65rem; letter-spacing: 0.08em;
+      color: var(--gold-light);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .org-pill:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── INSIGHTS ── */
+    #insights { padding-top: 5rem; }
+    .insights-coming {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      padding: 4rem 3rem; text-align: center;
+    }
+    .insights-coming p {
+      font-family: var(--sans); font-size: 1rem; color: var(--muted); margin-top: 1rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      border: 1px solid var(--gold);
+      font-size: 0.55rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold); font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 4rem 2rem;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .footer-brand { font-family: var(--serif); font-size: 1.1rem; }
+    .footer-brand span { color: var(--gold); }
+    .footer-copy { font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted); }
+    .footer-tagline { font-family: var(--serif); font-style: italic; font-size: 0.85rem; color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { display: none; }
+      .masthead { padding: 7rem 2rem 3rem; }
+      section { padding: 3rem 2rem; }
+      #profile { grid-template-columns: 1fr; gap: 2rem; }
+      .profile-photo { aspect-ratio: 4/3; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+      .cred-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+    }
+    @media (max-width: 560px) {
+      .areas-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="11" stroke="#C9A547" stroke-width="1"/>
+        <ellipse cx="14" cy="14" rx="5.5" ry="11" stroke="#C9A547" stroke-width="0.8"/>
+        <path d="M3 14 H25" stroke="#C9A547" stroke-width="0.8"/>
+        <path d="M5 8.5 C9 10 19 10 23 8.5" stroke="#C9A547" stroke-width="0.7"/>
+        <path d="M5 19.5 C9 18 19 18 23 19.5" stroke="#C9A547" stroke-width="0.7"/>
+      </svg>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#insights">Insights</a></li>
+      </ul>
+      <a href="https://linkedin.com/in/hugotolomei" target="_blank" rel="noopener" class="nav-linkedin">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <h1 class="masthead-name">Hugo<br>Tolomei</h1>
+    <p class="masthead-title">Senior Economic Policy Adviser</p>
+  </div>
+
+  <!-- PROFILE -->
+  <section id="profile" class="reveal">
+
+    <div class="profile-photo">
+      <img src="photo.jpg" alt="Hugo Tolomei">
+    </div>
+
+    <div class="profile-right">
+      <p class="section-label">P R O F I L E</p>
+      <span class="gold-dash"></span>
+      <p class="profile-bio">
+        Senior economist with over 20 years of experience at the intersection of economic policy, commodity markets and multilateral organisations. Based in London, advising governments and international organisations on policy and market strategy. Extensive experience supporting private and public sector clients across multiple markets, with close attention to the currency, regulatory, and commercial pressures that shape cross-border operations.
+      </p>
+    </div>
+
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <p class="section-label">K E Y &nbsp; E X P E R I E N C E</p>
+    <span class="gold-dash"></span>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <p class="exp-org">Brazilian Ministry of Foreign Affairs</p>
+        <p class="exp-role">Adviser</p>
+        <p class="exp-desc">
+          Engaged with the Brazilian Representation for International Organisations in London,
+          providing economic and financial analysis in coordination with the Ministry of Foreign Affairs
+          and the leading multilateral organisations headquartered in the British capital.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-org">International Fintech</p>
+        <p class="exp-role">Strategist</p>
+        <p class="exp-desc">
+          Pricing and monetisation strategy for an international payments fintech covering
+          Latin America and Southern Europe, including Portugal, Italy, Spain and Greece.
+          Multi-jurisdictional operations across currencies and financial markets.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-org">Investment Banking</p>
+        <p class="exp-role">Banking Analyst</p>
+        <p class="exp-desc">
+          Formative experience in trading and analysis across commodities and foreign exchange.
+          Deep understanding of global financial markets and soft commodity pricing mechanisms.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <p class="exp-org">IBGE, Brazilian Statistics Institute</p>
+        <p class="exp-role">Research Coordinator</p>
+        <p class="exp-desc">
+          Public sector engagement and innovation research at Brazil's primary
+          statistical body, grounding in evidence-based quantitative analysis and public policy.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" class="reveal">
+    <p class="section-label">A R E A S &nbsp; O F &nbsp; F O C U S</p>
+    <span class="gold-dash"></span>
+    <div class="areas-grid">
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="12" stroke="#C9A547" stroke-width="0.8"/>
+          <path d="M8 14 C8 10 11 8 14 8 C17 8 20 10 20 14 C20 18 17 20 14 20 C11 20 8 18 8 14Z" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <path d="M5 14 H23" stroke="#C9A547" stroke-width="0.8"/>
+          <path d="M14 3 C14 3 11 8.5 11 14 C11 19.5 14 25 14 25" stroke="#C9A547" stroke-width="0.8"/>
+          <path d="M14 3 C14 3 17 8.5 17 14 C17 19.5 14 25 14 25" stroke="#C9A547" stroke-width="0.8"/>
+        </svg>
+        <p class="area-title">International Policy</p>
+        <p class="area-desc">Engagement with multilateral organisations, diplomatic channels and international trade frameworks.</p>
+      </div>
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 22 L10 14 L16 17 L24 7" stroke="#C9A547" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="14" r="2" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <circle cx="16" cy="17" r="2" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <circle cx="24" cy="7" r="2" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+        </svg>
+        <p class="area-title">Commodity Markets</p>
+        <p class="area-desc">Soft commodities analysis, pricing mechanisms, supply chain economics and agribusiness intelligence.</p>
+      </div>
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="10" width="8" height="14" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <rect x="10" y="6" width="8" height="18" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <rect x="16" y="14" width="8" height="10" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+        </svg>
+        <p class="area-title">AgTech &amp; Innovation</p>
+        <p class="area-desc">Digital transformation in agriculture, data-driven policy instruments and technology-enabled market access.</p>
+      </div>
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 14 C6 9.58 9.58 6 14 6" stroke="#C9A547" stroke-width="0.8" stroke-linecap="round"/>
+          <path d="M22 14 C22 18.42 18.42 22 14 22" stroke="#C9A547" stroke-width="0.8" stroke-linecap="round"/>
+          <path d="M10 8 L14 6 L12 10" stroke="#C9A547" stroke-width="0.8" stroke-linejoin="round" fill="none"/>
+          <path d="M18 20 L14 22 L16 18" stroke="#C9A547" stroke-width="0.8" stroke-linejoin="round" fill="none"/>
+          <circle cx="14" cy="14" r="3" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+        </svg>
+        <p class="area-title">Currencies &amp; FX</p>
+        <p class="area-desc">Cross-border payment strategy, foreign exchange dynamics and multi-jurisdictional financial markets.</p>
+      </div>
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 4 L4 10 L4 22 L24 22 L24 10 Z" stroke="#C9A547" stroke-width="0.8" stroke-linejoin="round" fill="none"/>
+          <path d="M4 10 L14 16 L24 10" stroke="#C9A547" stroke-width="0.8" stroke-linejoin="round"/>
+          <path d="M14 16 L14 22" stroke="#C9A547" stroke-width="0.8"/>
+        </svg>
+        <p class="area-title">Market Intelligence</p>
+        <p class="area-desc">Strategic economic reports, benchmarking, feasibility analysis and competitive positioning for global markets.</p>
+      </div>
+
+      <div class="area-item">
+        <svg class="area-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="10" r="5" stroke="#C9A547" stroke-width="0.8" fill="none"/>
+          <path d="M5 24 C5 19.03 9.03 15 14 15 C18.97 15 23 19.03 23 24" stroke="#C9A547" stroke-width="0.8" stroke-linecap="round"/>
+        </svg>
+        <p class="area-title">Stakeholder Engagement</p>
+        <p class="area-desc">Building institutional relationships across governments, development banks, think tanks and private sector organisations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="reveal">
+    <p class="section-label">A C A D E M I C &nbsp; &amp; &nbsp; P R O F E S S I O N A L &nbsp; C R E D E N T I A L S</p>
+    <span class="gold-dash"></span>
+    <div class="cred-grid">
+      <div class="cred-card">
+        <p class="cred-level">Undergraduate</p>
+        <p class="cred-degree">BSc Economics</p>
+        <p class="cred-inst">Federal University of Rio de Janeiro (UFRJ)</p>
+      </div>
+      <div class="cred-card">
+        <p class="cred-level">Postgraduate</p>
+        <p class="cred-degree">MSc Public Policy</p>
+        <p class="cred-inst">Institute of Economics, Federal University of Rio de Janeiro (IE/UFRJ). Focus: International Economics</p>
+      </div>
+      <div class="cred-card">
+        <p class="cred-level">Executive Programme</p>
+        <p class="cred-degree">McKinsey Forward</p>
+        <p class="cred-inst">McKinsey &amp; Company. Leadership and Problem-Solving Programme</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ORGANISATIONS -->
+  <section id="organisations" class="reveal" style="padding-top:3rem;padding-bottom:3rem;">
+    <p class="section-label">D I R E C T &nbsp; E X P E R I E N C E &nbsp; W I T H &nbsp; M U L T I L A T E R A L &nbsp; O R G A N I S A T I O N S</p>
+    <span class="gold-dash"></span>
+    <div class="org-bar">
+      <span class="org-pill">ICO: Coffee</span>
+      <span class="org-pill">ISO: Sugar</span>
+      <span class="org-pill">IGC: Grains</span>
+      <span class="org-pill">IMO: UN</span>
+      <span class="org-pill">IMSO</span>
+      <span class="org-pill">IWC</span>
+      <span class="org-pill">Brazilian Ministry of International Relations</span>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- INSIGHTS -->
+  <section id="insights" class="reveal">
+    <p class="section-label">I N S I G H T S &nbsp; &amp; &nbsp; P U B L I C A T I O N S</p>
+    <span class="gold-dash"></span>
+    <div class="insights-coming">
+      <p>Economic analysis, policy briefs and market intelligence. Coming soon.</p>
+      <span class="tag" style="margin-top:1.5rem;">In preparation</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">hugotolomei.com &nbsp;|&nbsp; <span>Where Policy Meets Markets.</span></div>
+    <div class="footer-copy">London 2026</div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Contact — Hugo Tolomei</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1C2A4A;
+      --navy-mid:   #22325A;
+      --gold:       #C9A547;
+      --gold-light: #DDB96A;
+      --gold-faint: rgba(201,165,71,0.10);
+      --white:      #F5F3EE;
+      --muted:      rgba(245,243,238,0.55);
+      --border:     rgba(201,165,71,0.25);
+      --serif:      'Cormorant Garamond', Georgia, serif;
+      --sans:       'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 18px; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+    .nav-back svg { width: 14px; height: 14px; }
+    .nav-brand {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 4rem 6rem;
+    }
+
+    /* ── HEADER ── */
+    .page-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.0;
+      margin-bottom: 1rem;
+    }
+    .gold-dash {
+      display: block;
+      width: 28px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .page-intro {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── CHANNEL CARDS ── */
+    .channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+    }
+    .channel-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .channel-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+    .channel-icon-wrap {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .channel-icon { width: 72px; height: 72px; opacity: 0.9; }
+    .channel-title {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .channel-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .channel-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    /* WhatsApp QR */
+    .qr-wrap {
+      background: white;
+      padding: 8px;
+      display: inline-block;
+    }
+    .qr-wrap img {
+      display: block;
+      width: 150px; height: 150px;
+      object-fit: contain;
+    }
+    /* buttons - all same width */
+    .channel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      margin-top: auto;
+      padding-top: 1.25rem;
+      box-sizing: border-box;
+    }
+    .channel-btn:hover { background: var(--gold); color: var(--navy); }
+
+    /* buttons handled above */
+
+    /* ── FORM ── */
+    .form-section {
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+    }
+    .form-label-header {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .form-title {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .form-intro {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    input, textarea, select {
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--gold);
+    }
+    input::placeholder, textarea::placeholder {
+      color: rgba(245,243,238,0.25);
+    }
+    textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      margin-top: 1.5rem;
+      padding: 0.85rem 2.5rem;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .form-submit:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .form-note {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem 4rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    footer span { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 760px) {
+      nav { padding: 1rem 1.5rem; }
+      main { padding: 2.5rem 1.5rem 4rem; }
+      .channels { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      footer { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    <div class="nav-brand">Hugo Tolomei</div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HEADER -->
+    <p class="page-label">C O N T A C T</p>
+    <h1 class="page-title">Let's Connect</h1>
+    <span class="gold-dash"></span>
+    <p class="page-intro">
+      Choose the channel that works best for you. All enquiries are welcome, whether for advisory mandates, project collaboration, speaking engagements or an initial conversation.
+    </p>
+
+    <!-- CHANNEL CARDS -->
+    <div class="channels">
+
+      <!-- WhatsApp -->
+      <div class="channel-card">
+        <div class="channel-icon-wrap">
+          <svg class="channel-icon" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="36" r="32" stroke="#C9A547" stroke-width="1.5"/>
+            <path d="M36 16C24.96 16 16 24.96 16 36C16 39.42 16.9 42.62 18.46 45.38L16 56L26.84 53.58C29.52 55.08 32.66 56 36 56C47.04 56 56 47.04 56 36C56 24.96 47.04 16 36 16Z" stroke="#C9A547" stroke-width="1.5" fill="none"/>
+            <path d="M29 27.5C29 27.5 30 30.5 33 33.5C36 36.5 39 37.5 39 37.5L42 35C42 35 43 36 45 37C46 37.5 46 39 45 40C44 41 42 42 40 41C36 39.5 29.5 33 28 29C27 27 28 25 29 24C30 23 31.5 23 32 24C33 26 34 27.5 34 27.5L31 30.5" stroke="#C9A547" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="channel-title">WhatsApp</p>
+        <div class="channel-body">
+          <div class="qr-wrap">
+            <img src="qr-code-only.png" alt="WhatsApp QR Code">
+          </div>
+        </div>
+        <a href="https://wa.me/447591758713" target="_blank" class="channel-btn">Open WhatsApp</a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="channel-card">
+        <div class="channel-icon-wrap">
+          <svg class="channel-icon" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="36" r="32" stroke="#C9A547" stroke-width="1.5"/>
+            <rect x="20" y="30" width="8" height="22" stroke="#C9A547" stroke-width="1.5" fill="none"/>
+            <circle cx="24" cy="23" r="4" stroke="#C9A547" stroke-width="1.5" fill="none"/>
+            <path d="M33 30H41V34C42 31.5 45 30 48 30C53 30 55 33 55 38V52H47V40C47 37.8 46 36 44 36C42 36 41 37.8 41 40V52H33V30Z" stroke="#C9A547" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="channel-title">LinkedIn</p>
+        <div class="channel-body">
+          <p class="channel-desc">Connect professionally and follow updates on economic policy and markets.</p>
+        </div>
+        <a href="https://linkedin.com/in/hugotolomei" target="_blank" class="channel-btn">View Profile</a>
+      </div>
+
+      <!-- Email -->
+      <div class="channel-card">
+        <div class="channel-icon-wrap">
+          <svg class="channel-icon" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="36" r="32" stroke="#C9A547" stroke-width="1.5"/>
+            <rect x="16" y="24" width="40" height="26" rx="2" stroke="#C9A547" stroke-width="1.5" fill="none"/>
+            <path d="M16 26L36 42L56 26" stroke="#C9A547" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="channel-title">Email</p>
+        <div class="channel-body">
+          <p class="channel-desc">For formal enquiries, proposals or detailed briefings.</p>
+        </div>
+        <a href="mailto:hugotolomei@gmail.com" class="channel-btn">Send Email</a>
+      </div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+      <p class="form-label-header">F O R M</p>
+      <h2 class="form-title">Send a Message</h2>
+      <p class="form-intro">Prefer to write directly? Fill in the form below and I will respond within 48 hours.</p>
+
+      <!--
+        FORMSPREE SETUP (one-time):
+        1. Create a free account at formspree.io
+        2. Create a new form and copy your form ID
+        3. Replace YOUR_FORM_ID below with your actual ID
+        Example: action="https://formspree.io/f/abcd1234"
+      -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="organisation">Organisation</label>
+            <input type="text" id="organisation" name="organisation" placeholder="Company or institution">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="" disabled selected>Select a topic</option>
+              <option value="Advisory mandate">Advisory mandate</option>
+              <option value="Project collaboration">Project collaboration</option>
+              <option value="Speaking engagement">Speaking engagement</option>
+              <option value="General enquiry">General enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or enquiry..." required></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-note">Your information is used solely to respond to your enquiry and is never shared with third parties.</p>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    hugotolomei.com &nbsp;|&nbsp; <span>Where Policy Meets Markets.</span> &nbsp;|&nbsp; London 2026
+  </footer>
+
+</body>
+</html>

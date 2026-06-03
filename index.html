@@ -20,8 +20,9 @@
   <meta name="twitter:title" content="Hugo Tolomei, Economic Policy Adviser" />
   <meta name="twitter:description" content="Senior Economic Policy Adviser. Economic Intelligence. Political Reach. Global Vision." />
   <meta name="twitter:image" content="https://hugotolomei.com/photo.jpg" />
-  <!-- Favicon: globo dourado -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='11' stroke='%23C9A547' stroke-width='1.5' fill='%231C2A4A'/%3E%3Cellipse cx='14' cy='14' rx='5.5' ry='11' stroke='%23C9A547' stroke-width='1'/%3E%3Cpath d='M3 14 H25' stroke='%23C9A547' stroke-width='1'/%3E%3Cpath d='M5 8.5 C9 10 19 10 23 8.5' stroke='%23C9A547' stroke-width='0.9'/%3E%3Cpath d='M5 19.5 C9 18 19 18 23 19.5' stroke='%23C9A547' stroke-width='0.9'/%3E%3C/svg%3E">
+
+  <!-- Favicon: globo azul médio, fundo transparente -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='11' stroke='%232E5F99' stroke-width='1.5' fill='none'/%3E%3Cellipse cx='14' cy='14' rx='5.5' ry='11' stroke='%232E5F99' stroke-width='1' fill='none'/%3E%3Cpath d='M3 14 H25' stroke='%232E5F99' stroke-width='1'/%3E%3Cpath d='M5 8.5 C9 10 19 10 23 8.5' stroke='%232E5F99' stroke-width='0.9'/%3E%3Cpath d='M5 19.5 C9 18 19 18 23 19.5' stroke='%232E5F99' stroke-width='0.9'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +84,7 @@
       transition: color 0.25s;
     }
     .nav-links a:hover { color: var(--gold); }
-    .nav-linkedin {
+    .nav-btn {
       display: inline-flex; align-items: center;
       padding: 0.45rem 1.2rem;
       border: 1px solid var(--gold);
@@ -94,7 +95,7 @@
       font-weight: 500;
       transition: background 0.3s, color 0.3s;
     }
-    .nav-linkedin:hover { background: var(--gold); color: var(--navy); }
+    .nav-btn:hover { background: var(--gold); color: var(--navy); }
 
     /* ── MASTHEAD ── */
     .masthead {
@@ -168,12 +169,6 @@
     }
     .profile-photo img {
       width: 100%; height: 100%; object-fit: cover; object-position: center top;
-    }
-    .profile-photo-placeholder {
-      font-family: var(--serif);
-      font-size: 4rem;
-      color: var(--gold);
-      opacity: 0.25;
     }
     .profile-right {
       display: flex;
@@ -318,6 +313,17 @@
     .footer-brand span { color: var(--gold); }
     .footer-copy { font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted); }
     .footer-tagline { font-family: var(--serif); font-style: italic; font-size: 0.85rem; color: var(--gold); }
+    .footer-links { display: flex; gap: 1.25rem; align-items: center; }
+    .footer-link {
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .footer-link:hover { color: var(--gold); border-color: var(--gold); }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
@@ -368,7 +374,8 @@
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#insights">Insights</a></li>
       </ul>
-      <a href="https://linkedin.com/in/hugotolomei" target="_blank" rel="noopener" class="nav-linkedin">LinkedIn</a>
+      <a href="https://x.com/hugotolomei" target="_blank" rel="noopener" class="nav-btn">X</a>
+      <a href="https://linkedin.com/in/hugotolomei" target="_blank" rel="noopener" class="nav-btn">LinkedIn</a>
     </div>
   </nav>
 
@@ -575,6 +582,10 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand">hugotolomei.com &nbsp;|&nbsp; <span>Where Policy Meets Markets.</span></div>
+    <div class="footer-links">
+      <a href="https://x.com/hugotolomei" target="_blank" rel="noopener" class="footer-link">X</a>
+      <a href="https://linkedin.com/in/hugotolomei" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+    </div>
     <div class="footer-copy">London 2026</div>
   </footer>
 
